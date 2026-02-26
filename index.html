@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumar Bırakma Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💪 Kumar Bırakma Yolculuğum</h1>
+        </header>
+
+        <div class="main-content">
+            <!-- Gün Sayacı -->
+            <div class="card counter-card">
+                <h2>Temiz Günler</h2>
+                <div class="counter" id="dayCounter">0</div>
+                <p class="counter-label">gün</p>
+            </div>
+
+            <!-- Başlangıç Tarihi Seçimi -->
+            <div class="card" id="setupCard">
+                <h3>Başlangıç Tarihi</h3>
+                <input type="date" id="startDate">
+                <button onclick="setStartDate()" class="btn-primary">Kaydet</button>
+            </div>
+
+            <!-- Tasarruf Hesaplayıcı -->
+            <div class="card savings-card">
+                <h3>💰 Tasarruf Hesaplayıcı</h3>
+                <div class="input-group">
+                    <label>Günlük ortalama harcama:</label>
+                    <input type="number" id="dailySpending" placeholder="0">
+                    <span>TL</span>
+                </div>
+                <button onclick="calculateSavings()" class="btn-secondary">Hesapla</button>
+                <div class="savings-result" id="savingsResult"></div>
+            </div>
+
+            <!-- Motivasyon Mesajları -->
+            <div class="card motivation-card">
+                <h3>✨ Motivasyon</h3>
+                <p class="motivation-text" id="motivationText"></p>
+                <button onclick="getNewMotivation()" class="btn-secondary">Yeni Mesaj</button>
+            </div>
+
+            <!-- İlerleme Hedefleri -->
+            <div class="card milestones-card">
+                <h3>🎯 Hedefler</h3>
+                <div id="milestones"></div>
+            </div>
+
+            <!-- Acil Durum Butonu -->
+            <div class="card emergency-card">
+                <h3>🚨 Acil Durum</h3>
+                <p>Kumar oynamak istediğinde bu butona bas!</p>
+                <button onclick="showEmergency()" class="btn-emergency">Yardım Et!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Acil Durum Modal -->
+    <div id="emergencyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEmergency()">&times;</span>
+            <h2>🛑 DUR!</h2>
+            <div id="emergencyContent"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
