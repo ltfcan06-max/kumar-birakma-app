@@ -3,98 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kumar BÄ±rakma UygulamasÄ±</title>
+    <title>Kumar Bırakma Uygulaması</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>ğŸ’ª Kumar BÄ±rakma YolculuÄŸum</h1>
+            <h1>💪 Kumar Bırakma Yolculuğum</h1>
         </header>
-
         <div class="main-content">
-            <!-- GÃ¼n SayacÄ± -->
             <div class="card counter-card">
-                <h2>Temiz GÃ¼nler</h2>
+                <h2>Temiz Günler</h2>
                 <div class="counter" id="dayCounter">0</div>
-                <p class="counter-label">gÃ¼n</p>
+                <p class="counter-label">gün</p>
             </div>
-
-            <!-- BaÅŸlangÄ±Ã§ Tarihi SeÃ§imi -->
             <div class="card" id="setupCard">
-                <h3>BaÅŸlangÄ±Ã§ Tarihi</h3>
+                <h3>Başlangıç Tarihi</h3>
                 <input type="date" id="startDate">
                 <button onclick="setStartDate()" class="btn-primary">Kaydet</button>
             </div>
-
-            <!-- Tasarruf HesaplayÄ±cÄ± -->
             <div class="card savings-card">
-                <h3>ğŸ’° Tasarruf HesaplayÄ±cÄ±</h3>
+                <h3>💰 Tasarruf Hesaplayıcı</h3>
                 <div class="input-group">
-                    <label>GÃ¼nlÃ¼k ortalama harcama:</label>
+                    <label>Günlük ortalama harcama:</label>
                     <input type="number" id="dailySpending" placeholder="0">
                     <span>TL</span>
                 </div>
                 <button onclick="calculateSavings()" class="btn-secondary">Hesapla</button>
                 <div class="savings-result" id="savingsResult"></div>
             </div>
-
-            <!-- Motivasyon MesajlarÄ± -->
             <div class="card motivation-card">
-                <h3>âœ¨ Motivasyon</h3>
+                <h3>✨ Motivasyon</h3>
                 <p class="motivation-text" id="motivationText"></p>
                 <button onclick="getNewMotivation()" class="btn-secondary">Yeni Mesaj</button>
             </div>
-
-            <!-- Ä°lerleme Hedefleri -->
             <div class="card milestones-card">
-                <h3>ğŸ¯ Hedefler</h3>
+                <h3>🎯 Hedefler</h3>
                 <div id="milestones"></div>
             </div>
-
-            <!-- Acil Durum Butonu -->
             <div class="card emergency-card">
-                <h3>ğŸš¨ Acil Durum</h3>
-                <p>Kumar oynamak istediÄŸinde bu butona bas!</p>
-                <button onclick="showEmergency()" class="btn-emergency">YardÄ±m Et!</button>
+                <h3>🚨 Acil Durum</h3>
+                <p>Kumar oynamak istediğinde bu butona bas!</p>
+                <button onclick="showEmergency()" class="btn-emergency">Yardım Et!</button>
             </div>
         </div>
     </div>
-
-    <!-- Acil Durum Modal -->
     <div id="emergencyModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeEmergency()">&times;</span>
-            <h2>ğŸ›‘ DUR!</h2>
+            <h2>🛑 DUR!</h2>
             <div id="emergencyContent"></div>
         </div>
     </div>
-
+    <footer style="background: rgba(102, 126, 234, 0.8); color: white; padding: 15px; margin-top: 40px; font-size: 0.85em;">
+        <p style="text-align: center; margin: 5px 0;">© 2026 Kumar Bırakma Uygulaması</p>
+        <p style="text-align: center; margin: 10px 0;">
+            <a href="privacy.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Gizlilik</a> |
+            <a href="terms.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Kullanım Şartları</a> |
+            <a href="kvkk.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">KVKK</a> |
+            <a href="cookies.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Çerezler</a> |
+            <a href="disclaimer.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Sorumluluk</a> |
+            <a href="faq.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">SSS</a> |
+            <a href="about.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Hakkımızda</a> |
+            <a href="contact.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">İletişim</a>
+        </p>
+        <p style="text-align: center; font-size: 0.8em; opacity: 0.7; margin: 5px 0;">Bu site bilgilendirme amaçlıdır.</p>
+    </footer>
     <script src="app.js"></script>
-        <footer style="background: #667eea; color: white; padding: 20px; margin-top: 30px;">
-        <p style="text-align: center;">© 2026 Kumar Bırakma Uygulaması - Tüm hakları saklıdır</p>
-        <div style="max-width: 800px; margin: 20px auto;">
-            <details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: bold;">📄 Gizlilik Politikası</summary>
-                <p style="margin-top: 10px;">Hiçbir kişisel veri toplamıyoruz. Tüm veriler cihazınızda saklanır. <a href="privacy.html" style="color: #ffd700;">Detaylı bilgi →</a></p>
-            <details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">⚠️ Sorumluluk Reddi</summary><p style="margin-top: 10px;">Tibbi tavsiye degildir. <a href="disclaimer.html" style="color: #ffd700;">Detayli bilgi →</a></p><details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">❓ SSS</summary><p style="margin-top: 10px;"><a href="faq.html" style="color: #ffd700;">Sikca Sorulan Sorular →</a></p><details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">ℹ️ Hakkimizda</summary><p style="margin-top: 10px;"><a href="about.html" style="color: #ffd700;">Hakkimizda →</a></p>
-            <details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: bold;">📋 Kullanım Şartları</summary>
-                <p style="margin-top: 10px;">Bu uygulama sadece bilgilendirme amaçlıdır. <a href="terms.html" style="color: #ffd700;">Detaylı bilgi →</a></p>
-            <details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">⚠️ Sorumluluk Reddi</summary><p style="margin-top: 10px;">Tibbi tavsiye degildir. <a href="disclaimer.html" style="color: #ffd700;">Detayli bilgi →</a></p><details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">❓ SSS</summary><p style="margin-top: 10px;"><a href="faq.html" style="color: #ffd700;">Sikca Sorulan Sorular →</a></p><details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">ℹ️ Hakkimizda</summary><p style="margin-top: 10px;"><a href="about.html" style="color: #ffd700;">Hakkimizda →</a></p>
-            <details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: bold;">🔒 KVKK Aydınlatma Metni</summary>
-                <p style="margin-top: 10px;">Kişisel verileriniz korunur. <a href="kvkk.html" style="color: #ffd700;">Detaylı bilgi →</a></p>
-            <details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">⚠️ Sorumluluk Reddi</summary><p style="margin-top: 10px;">Tibbi tavsiye degildir. <a href="disclaimer.html" style="color: #ffd700;">Detayli bilgi →</a></p><details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">❓ SSS</summary><p style="margin-top: 10px;"><a href="faq.html" style="color: #ffd700;">Sikca Sorulan Sorular →</a></p><details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">ℹ️ Hakkimizda</summary><p style="margin-top: 10px;"><a href="about.html" style="color: #ffd700;">Hakkimizda →</a></p>
-            <details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: bold;">🍪 Çerez Politikası</summary>
-                <p style="margin-top: 10px;">Çerez kullanmıyoruz, sadece LocalStorage. <a href="cookies.html" style="color: #ffd700;">Detaylı bilgi →</a></p>
-            <details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">⚠️ Sorumluluk Reddi</summary><p style="margin-top: 10px;">Tibbi tavsiye degildir. <a href="disclaimer.html" style="color: #ffd700;">Detayli bilgi →</a></p><details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">❓ SSS</summary><p style="margin-top: 10px;"><a href="faq.html" style="color: #ffd700;">Sikca Sorulan Sorular →</a></p><details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">ℹ️ Hakkimizda</summary><p style="margin-top: 10px;"><a href="about.html" style="color: #ffd700;">Hakkimizda →</a></p>
-            <details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: bold;">📧 İletişim</summary>
-                <p style="margin-top: 10px;">Email: ltfcan06@gmail.com | <a href="contact.html" style="color: #ffd700;">İletişim formu →</a></p>
-            <details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">⚠️ Sorumluluk Reddi</summary><p style="margin-top: 10px;">Tibbi tavsiye degildir. <a href="disclaimer.html" style="color: #ffd700;">Detayli bilgi →</a></p><details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">❓ SSS</summary><p style="margin-top: 10px;"><a href="faq.html" style="color: #ffd700;">Sikca Sorulan Sorular →</a></p><details style="margin: 10px 0; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;"><summary style="cursor: pointer; font-weight: bold;">ℹ️ Hakkimizda</summary><p style="margin-top: 10px;"><a href="about.html" style="color: #ffd700;">Hakkimizda →</a></p>
-        </div>
-        <p style="text-align: center; font-size: 0.9em; margin-top: 20px;">Bu uygulama sadece bilgilendirme amaçlıdır. Profesyonel yardım alınması önerilir.</p>
-    </footer></body>
+</body>
 </html>
