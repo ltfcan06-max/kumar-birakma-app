@@ -324,18 +324,19 @@ header p {
 .milestones-card {
     background: #001f3f;
     color: white;
-    padding: 20px;
+    padding: 0;
 }
 
 .milestones-card h3 {
     color: white;
-    margin-bottom: 15px;
+    margin: 0;
+    padding: 20px 20px 15px 20px;
 }
 
 #milestones {
     color: white;
-    background: transparent;
-    padding: 0;
+    background: #001f3f;
+    padding: 0 20px 20px 20px;
     border-radius: 0;
     min-height: 50px;
 }
@@ -343,9 +344,9 @@ header p {
 #milestones p {
     color: white;
     margin: 0;
-    padding: 15px;
-    background: transparent;
-    border-radius: 10px;
+    padding: 0;
+    background: #001f3f;
+    border-radius: 0;
 }
 
 .milestone {
