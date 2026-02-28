@@ -182,7 +182,7 @@ function showEmergency() {
     html += '<p style="margin-top: 20px; font-weight: bold;">Bu his geçici! Sen daha güçlüsün! 💪</p>';
     
     content.innerHTML = html;
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
 }
 
 function closeEmergency() {
