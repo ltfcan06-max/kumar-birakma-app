@@ -9,6 +9,7 @@ body {
     background: #001f3f;
     min-height: 100vh;
     padding: 20px;
+    padding-bottom: 180px;
 }
 
 .container {
@@ -293,36 +294,44 @@ header h1 {
         align-items: stretch;
     }
     
-    .fixed-help-btn {
-        padding: 12px 20px;
-        font-size: 1em;
+    .fixed-emergency-card {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .fixed-emergency-card h3 {
+        font-size: 1.1em;
+    }
+    
+    .fixed-emergency-card p {
+        font-size: 0.9em;
     }
 }
 
-/* Sabit Yardım Butonu */
-.fixed-help-btn {
+/* Sabit Acil Durum Kartı */
+.fixed-emergency-card {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #ff4757;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
-    z-index: 999;
-    transition: all 0.3s ease;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+    z-index: 998;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
 }
 
-.fixed-help-btn:hover {
-    background: #ee5a6f;
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+.fixed-emergency-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+    color: #333;
 }
 
-.fixed-help-btn:active {
-    transform: scale(0.95);
+.fixed-emergency-card p {
+    margin: 0 0 15px 0;
+    font-size: 1em;
+    color: #666;
 }
