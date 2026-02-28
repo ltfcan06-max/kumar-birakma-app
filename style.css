@@ -47,7 +47,7 @@ body::after {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -55,11 +55,20 @@ header {
     text-align: center;
     color: white;
     margin-bottom: 30px;
+    background: #001f3f;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 header h1 {
     font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: white;
+}
+
+header p {
+    color: white;
 }
 
 .main-content {
@@ -71,17 +80,19 @@ header h1 {
     background: #001f3f;
     color: white;
     border-radius: 15px;
-    padding: 25px;
+    padding: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
 }
 
-.card h2, .card h3, .card label {
+.card h2, .card h3, .card label, .card p, .card span {
     color: white;
 }
 
-.card p {
-    color: rgba(255, 255, 255, 0.9);
+.milestone-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: white;
 }
 
 .card:hover {
@@ -256,7 +267,7 @@ header h1 {
 
 .input-group label {
     font-weight: 600;
-    color: #333;
+    color: white;
 }
 
 .savings-result {
@@ -277,7 +288,7 @@ header h1 {
 .motivation-text {
     font-size: 1.3em;
     line-height: 1.6;
-    color: #333;
+    color: white;
     margin: 20px 0;
     font-style: italic;
     text-align: center;
@@ -290,16 +301,18 @@ header h1 {
 .milestone {
     padding: 15px;
     margin: 10px 0;
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
 
 .milestone.achieved {
-    background: #d4edda;
+    background: rgba(40, 167, 69, 0.3);
     border-left: 5px solid #28a745;
+    color: white;
 }
 
 .milestone-name {
