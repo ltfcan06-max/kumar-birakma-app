@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +9,6 @@ body {
     background: #001f3f;
     min-height: 100vh;
     padding: 20px;
-    padding-bottom: 100px;
 }
 
 .container {
@@ -113,48 +112,17 @@ header h1 {
     transform: scale(1.05);
 }
 
-.btn-reset {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    padding: 10px 20px;
-    font-size: 0.9em;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: all 0.3s ease;
-}
-
-.btn-reset:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.8);
-    transform: scale(1.05);
-}
-
 .btn-emergency {
     background: #ff4757;
     color: white;
     width: 100%;
     font-size: 1.3em;
     padding: 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    max-width: 100%;
-    border-radius: 0;
-    box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
 }
 
 .btn-emergency:hover {
     background: #ee5a6f;
-    transform: scale(1.01);
+    transform: scale(1.02);
 }
 
 .input-group {
@@ -232,7 +200,8 @@ header h1 {
 }
 
 .emergency-card {
-    display: none;
+    background: white;
+    text-align: center;
 }
 
 .emergency-card p {

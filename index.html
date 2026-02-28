@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Last Gamble - Kumar Bırakma Uygulaması</title>
+    <title>Kumar Bırakma Uygulaması</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>💪 Last Gamble</h1>`n            <p style="color: white; font-size: 1.1em; margin-top: 10px; opacity: 0.9;">Kumar Bırakma Yolculuğum</p>
+            <h1>💪 Kumar Bırakma Yolculuğum</h1>
         </header>
         <div class="main-content">
             <div class="card counter-card">
                 <h2>Temiz Günler</h2>
                 <div class="counter" id="dayCounter">0</div>
-                <p class="counter-label">gün</p>`n                <button onclick="resetDate()" class="btn-reset">🔄 Tarihi Sıfırla</button>
+                <p class="counter-label">gün</p>
             </div>
             <div class="card" id="setupCard">
                 <h3>Başlangıç Tarihi</h3>
@@ -41,7 +41,13 @@
                 <h3>🎯 Hedefler</h3>
                 <div id="milestones"></div>
             </div>
-            </div>`n        </div>`n    </div>`n    `n    <button onclick="showEmergency()" class="btn-emergency">🚨 Acil Yardım - Kumar Oynamak İstiyorum!</button>`n    
+            <div class="card emergency-card">
+                <h3>🚨 Acil Durum</h3>
+                <p>Kumar oynamak istediğinde bu butona bas!</p>
+                <button onclick="showEmergency()" class="btn-emergency">Yardım Et!</button>
+            </div>
+        </div>
+    </div>
     <div id="emergencyModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeEmergency()">&times;</span>
@@ -49,8 +55,8 @@
             <div id="emergencyContent"></div>
         </div>
     </div>
-    <footer style="background: rgba(0, 31, 63, 0.9); color: white; padding: 15px; margin-top: 40px; font-size: 0.85em;">
-        <p style="text-align: center; margin: 5px 0;">© 2026 Last Gamble - Tüm hakları saklıdır</p>
+    <footer style="background: rgba(102, 126, 234, 0.8); color: white; padding: 15px; margin-top: 40px; font-size: 0.85em;">
+        <p style="text-align: center; margin: 5px 0;">© 2026 Kumar Bırakma Uygulaması - Tüm hakları saklıdır</p>
         <p style="text-align: center; margin: 10px 0;">
             <a href="privacy.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Gizlilik</a> |
             <a href="terms.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Kullanım Şartları</a> |
