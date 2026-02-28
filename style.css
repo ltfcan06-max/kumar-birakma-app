@@ -6,14 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom, 
-        #1a1a2e 0%, 
-        #16213e 20%, 
-        #0f3460 40%, 
-        #533483 60%, 
-        #e94560 80%, 
-        #ff6b6b 90%, 
-        #ffd93d 100%);
+    background: #0a0a0a;
     background-attachment: fixed;
     min-height: 100vh;
     padding: 20px;
@@ -21,54 +14,36 @@ body {
     overflow-x: hidden;
 }
 
-/* Yükselen Güneş */
+/* Sol taraf resim */
 body::before {
     content: '';
     position: fixed;
-    bottom: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, 
-        #ffd93d 0%, 
-        #ff6b6b 30%, 
-        #e94560 50%, 
-        transparent 70%);
-    border-radius: 50%;
-    z-index: -2;
-    animation: sunrise 3s ease-in-out infinite alternate;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 500px;
+    background: url('background.jpg') center center;
+    background-size: cover;
+    opacity: 0.03;
+    z-index: -1;
+    pointer-events: none;
 }
 
-@keyframes sunrise {
-    0% {
-        bottom: -50%;
-        opacity: 0.8;
-    }
-    100% {
-        bottom: -45%;
-        opacity: 1;
-    }
-}
-
-/* Işık Huzmeleri */
+/* Sağ taraf resim */
 body::after {
     content: '';
     position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    background: 
-        linear-gradient(45deg, transparent 48%, rgba(255, 217, 61, 0.1) 49%, rgba(255, 217, 61, 0.1) 51%, transparent 52%),
-        linear-gradient(90deg, transparent 48%, rgba(255, 217, 61, 0.1) 49%, rgba(255, 217, 61, 0.1) 51%, transparent 52%),
-        linear-gradient(135deg, transparent 48%, rgba(255, 217, 61, 0.1) 49%, rgba(255, 217, 61, 0.1) 51%, transparent 52%);
-    background-size: 200px 200px;
-    background-position: center bottom;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 500px;
+    background: url('background.jpg') center center;
+    background-size: cover;
+    opacity: 0.03;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.3;
 }
 
 .container {
