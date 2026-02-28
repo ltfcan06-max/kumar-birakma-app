@@ -322,7 +322,16 @@ header p {
 }
 
 .milestones-card {
-    background: white;
+    background: #001f3f;
+    color: white;
+}
+
+#milestones {
+    color: white;
+}
+
+#milestones p {
+    color: white;
 }
 
 .milestone {
