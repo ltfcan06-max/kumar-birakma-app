@@ -196,3 +196,19 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 }
+
+
+// Tarihi sıfırlama
+function resetDate() {
+    if (confirm('Başlangıç tarihini sıfırlamak istediğinize emin misiniz? Tüm ilerlemeniz silinecek!')) {
+        localStorage.removeItem('startDate');
+        localStorage.removeItem('dailySpending');
+        document.getElementById('setupCard').style.display = 'block';
+        document.getElementById('dayCounter').textContent = '0';
+        document.getElementById('startDate').value = '';
+        document.getElementById('dailySpending').value = '';
+        document.getElementById('savingsResult').innerHTML = '';
+        updateMilestones();
+        alert('Başlangıç tarihi sıfırlandı. Yeni bir başlangıç yapabilirsiniz!');
+    }
+}

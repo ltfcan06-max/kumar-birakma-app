@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #001f3f;
     min-height: 100vh;
     padding: 20px;
     padding-bottom: 100px;
@@ -47,7 +47,7 @@ header h1 {
 
 .counter-card {
     text-align: center;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: #001f3f;
     color: white;
 }
 
@@ -75,7 +75,7 @@ header h1 {
 #setupCard input {
     padding: 10px;
     font-size: 1.1em;
-    border: 2px solid #667eea;
+    border: 2px solid #001f3f;
     border-radius: 8px;
     margin: 15px 0;
     width: 100%;
@@ -93,23 +93,41 @@ header h1 {
 }
 
 .btn-primary {
-    background: #667eea;
+    background: #001f3f;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #5568d3;
+    background: #003366;
     transform: scale(1.05);
 }
 
 .btn-secondary {
-    background: #4facfe;
+    background: #001f3f;
     color: white;
     margin-top: 10px;
 }
 
 .btn-secondary:hover {
-    background: #00c6ff;
+    background: #003366;
+    transform: scale(1.05);
+}
+
+.btn-reset {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-reset:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
     transform: scale(1.05);
 }
 
@@ -173,7 +191,7 @@ header h1 {
 }
 
 .motivation-card {
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    background: white;
 }
 
 .motivation-text {
@@ -186,7 +204,7 @@ header h1 {
 }
 
 .milestones-card {
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    background: white;
 }
 
 .milestone {
