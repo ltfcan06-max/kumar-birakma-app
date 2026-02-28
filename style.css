@@ -344,7 +344,7 @@ header p {
     color: white;
     margin: 0;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
+    background: transparent;
     border-radius: 10px;
 }
 
