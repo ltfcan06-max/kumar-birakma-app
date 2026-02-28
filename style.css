@@ -371,7 +371,8 @@ header p {
 }
 
 .modal-content {
-    background-color: white;
+    background-color: #001f3f;
+    color: white;
     padding: 30px;
     border-radius: 15px;
     width: 90%;
@@ -380,6 +381,19 @@ header p {
     overflow-y: auto;
     animation: slideIn 0.3s ease;
     position: relative;
+}
+
+.modal-content h2 {
+    color: white;
+}
+
+.modal-content p {
+    color: white;
+}
+
+.modal-content li {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 @keyframes slideIn {
@@ -394,7 +408,7 @@ header p {
 }
 
 .close {
-    color: #aaa;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -402,13 +416,14 @@ header p {
 }
 
 .close:hover {
-    color: #000;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #emergencyContent {
     margin-top: 20px;
     font-size: 1.2em;
     line-height: 1.8;
+    color: white;
 }
 
 #emergencyContent ul {
@@ -419,8 +434,9 @@ header p {
 #emergencyContent li {
     margin: 10px 0;
     padding: 10px;
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
+    color: white;
 }
 
 @media (max-width: 600px) {
