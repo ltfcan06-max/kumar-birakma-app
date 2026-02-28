@@ -328,10 +328,15 @@ header p {
 
 #milestones {
     color: white;
+    background: #001f3f;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 50px;
 }
 
 #milestones p {
     color: white;
+    margin: 0;
 }
 
 .milestone {
