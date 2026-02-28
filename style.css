@@ -131,11 +131,17 @@ header p {
 #setupCard input {
     padding: 10px;
     font-size: 1.1em;
-    border: 2px solid #001f3f;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     margin: 15px 0;
     width: 100%;
     max-width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#setupCard input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
 
 .btn-primary, .btn-secondary, .btn-emergency, .btn-reset {
@@ -261,10 +267,20 @@ header p {
 .input-group input {
     flex: 1;
     padding: 10px;
-    border: 2px solid #ddd;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     font-size: 1em;
     min-width: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group span {
+    color: white;
 }
 
 .input-group label {
@@ -275,12 +291,16 @@ header p {
 .savings-result {
     margin-top: 20px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     font-size: 1.2em;
     color: white;
     font-weight: bold;
     text-align: center;
+}
+
+.savings-result div {
+    color: white;
 }
 
 .motivation-card {
