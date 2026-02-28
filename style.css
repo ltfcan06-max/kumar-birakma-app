@@ -81,7 +81,7 @@ header h1 {
     max-width: 300px;
 }
 
-.btn-primary, .btn-secondary, .btn-emergency {
+.btn-primary, .btn-secondary, .btn-emergency, .btn-reset {
     padding: 12px 30px;
     font-size: 1.1em;
     border: none;
@@ -110,6 +110,48 @@ header h1 {
 .btn-secondary:hover {
     background: #003366;
     transform: scale(1.05);
+}
+
+.btn-reset {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-top: 20px;
+    font-size: 1em;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.btn-reset:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: scale(1.05);
+    border-color: rgba(255,255,255,0.5);
+}
+
+.reset-icon {
+    font-size: 1.3em;
+    animation: rotate 2s linear infinite;
+}
+
+.btn-reset:hover .reset-icon {
+    animation: rotate 0.5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.reset-text {
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .btn-emergency {
