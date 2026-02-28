@@ -1,32 +1,33 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kumar Bırakma Uygulaması</title>
+    <title>Last Gamble - Kumar BÄ±rakma UygulamasÄ±</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>?? Kumar Bırakma Yolculuğum</h1>
+            <h1>ğŸ’ª Last Gamble</h1>
+            <p style="color: white; font-size: 1.2em; margin-top: 10px;">Kumar BÄ±rakma YolculuÄŸum</p>
         </header>
         <div class="main-content">
             <div class="card counter-card">
-                <h2>Temiz Günler</h2>
+                <h2>Temiz GÃ¼nler</h2>
                 <div class="counter" id="dayCounter">0</div>
-                <p class="counter-label">gün</p>
-                <button onclick="resetDate()" class="btn-reset">Sayacı Sıfırla</button>
+                <p class="counter-label">gÃ¼n</p>
+                <button onclick="resetDate()" class="btn-reset">SayacÄ± SÄ±fÄ±rla</button>
             </div>
             <div class="card" id="setupCard">
-                <h3>Başlangıç Tarihi</h3>
+                <h3>BaÅŸlangÄ±Ã§ Tarihi</h3>
                 <input type="date" id="startDate">
                 <button onclick="setStartDate()" class="btn-primary">Kaydet</button>
             </div>
             <div class="card savings-card">
-                <h3>?? Tasarruf Hesaplayıcı</h3>
+                <h3>ğŸ’° Tasarruf HesaplayÄ±cÄ±</h3>
                 <div class="input-group">
-                    <label>Günlük ortalama harcama:</label>
+                    <label>GÃ¼nlÃ¼k ortalama harcama:</label>
                     <input type="number" id="dailySpending" placeholder="0">
                     <span>TL</span>
                 </div>
@@ -34,41 +35,45 @@
                 <div class="savings-result" id="savingsResult"></div>
             </div>
             <div class="card motivation-card">
-                <h3>? Motivasyon</h3>
+                <h3>âœ¨ Motivasyon</h3>
                 <p class="motivation-text" id="motivationText"></p>
                 <button onclick="getNewMotivation()" class="btn-secondary">Yeni Mesaj</button>
             </div>
             <div class="card milestones-card">
-                <h3>?? Hedefler</h3>
+                <h3>ğŸ¯ Hedefler</h3>
                 <div id="milestones"></div>
             </div>
             <div class="card emergency-card">
-                <h3>?? Acil Durum</h3>
-                <p>Kumar oynamak istediğinde bu butona bas!</p>
-                <button onclick="showEmergency()" class="btn-emergency">Yardım Et!</button>
+                <h3>ğŸš¨ Acil Durum</h3>
+                <p>Kumar oynamak istediÄŸinde bu butona bas!</p>
+                <button onclick="showEmergency()" class="btn-emergency">YardÄ±m Et!</button>
             </div>
         </div>
     </div>
+    
+    <!-- Sabit YardÄ±m Butonu -->
+    <button class="fixed-help-btn" onclick="showEmergency()">ğŸ†˜ YardÄ±m</button>
+    
     <div id="emergencyModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeEmergency()">&times;</span>
-            <h2>?? DUR!</h2>
+            <h2>ğŸ›‘ DUR!</h2>
             <div id="emergencyContent"></div>
         </div>
     </div>
-    <footer style="background: rgba(102, 126, 234, 0.8); color: white; padding: 15px; margin-top: 40px; font-size: 0.85em;">
-        <p style="text-align: center; margin: 5px 0;">© 2026 Kumar Bırakma Uygulaması - Tüm hakları saklıdır</p>
+    <footer style="background: rgba(30, 64, 175, 0.8); color: white; padding: 15px; margin-top: 40px; font-size: 0.85em;">
+        <p style="text-align: center; margin: 5px 0;">Â© 2026 Last Gamble - TÃ¼m haklarÄ± saklÄ±dÄ±r</p>
         <p style="text-align: center; margin: 10px 0;">
             <a href="privacy.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Gizlilik</a> |
-            <a href="terms.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Kullanım Şartları</a> |
+            <a href="terms.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">KullanÄ±m ÅartlarÄ±</a> |
             <a href="kvkk.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">KVKK</a> |
-            <a href="cookies.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Çerezler</a> |
+            <a href="cookies.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Ã‡erezler</a> |
             <a href="disclaimer.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Sorumluluk</a> |
             <a href="faq.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">SSS</a> |
-            <a href="about.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Hakkımızda</a> |
-            <a href="contact.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">İletişim</a>
+            <a href="about.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">HakkÄ±mÄ±zda</a> |
+            <a href="contact.html" style="color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: none;">Ä°letiÅŸim</a>
         </p>
-        <p style="text-align: center; font-size: 0.8em; opacity: 0.7; margin: 5px 0;">Bu site bilgilendirme amaçlıdır. Profesyonel yardım alınması önerilir.</p>
+        <p style="text-align: center; font-size: 0.8em; opacity: 0.7; margin: 5px 0;">Bu site bilgilendirme amaÃ§lÄ±dÄ±r. Profesyonel yardÄ±m alÄ±nmasÄ± Ã¶nerilir.</p>
     </footer>
     <script src="app.js"></script>
 </body>

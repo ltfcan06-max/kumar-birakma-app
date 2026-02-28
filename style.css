@@ -286,4 +286,37 @@ header h1 {
         flex-direction: column;
         align-items: stretch;
     }
+    
+    .fixed-help-btn {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Sabit Yardım Butonu */
+.fixed-help-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.fixed-help-btn:hover {
+    background: #ee5a6f;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+}
+
+.fixed-help-btn:active {
+    transform: scale(0.95);
 }
