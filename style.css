@@ -533,10 +533,29 @@ header p {
     padding: 5px 15px;
     border-radius: 5px;
     z-index: 1001;
+    transition: all 0.3s ease;
 }
 
 .menu-btn:hover {
     background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Menü Overlay */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
 }
 
 /* Yan Menü */
@@ -549,9 +568,16 @@ header p {
     left: 0;
     background-color: #001f3f;
     overflow-x: hidden;
-    transition: 0.3s;
+    transition: width 0.3s ease;
     padding-top: 60px;
     box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+}
+
+.side-menu h2 {
+    color: white;
+    padding: 0 30px 20px 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
 }
 
 .side-menu a {
@@ -560,19 +586,32 @@ header p {
     font-size: 1.2em;
     color: white;
     display: block;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
 }
 
 .side-menu a:hover {
     background-color: #003366;
+    border-left: 4px solid white;
+    padding-left: 35px;
 }
 
-.side-menu .close-btn {
+.side-menu .close-menu {
     position: absolute;
     top: 10px;
     right: 25px;
     font-size: 2.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
     padding: 0;
+    transition: all 0.3s ease;
+}
+
+.side-menu .close-menu:hover {
+    color: rgba(255, 255, 255, 0.7);
+    transform: rotate(90deg);
 }
 
 .side-menu.open {

@@ -362,7 +362,9 @@ function resetDate() {
 // Menü toggle
 function toggleMenu() {
     const menu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('menuOverlay');
     menu.classList.toggle('open');
+    overlay.classList.toggle('active');
 }
 
 // Üyelik oluştur
