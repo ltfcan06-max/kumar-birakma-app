@@ -216,11 +216,6 @@ function setStartDate() {
     document.getElementById('setupCard').style.display = 'none';
     updateCounter();
     updateMilestones();
-    
-    // Firebase'e kaydet
-    if (typeof saveUserData === 'function') {
-        saveUserData();
-    }
 }
 
 // Gün sayacını güncelleme
@@ -272,11 +267,6 @@ function calculateSavings() {
             ${diffDays} gün × ${dailySpending} TL
         </div>
     `;
-    
-    // Firebase'e kaydet
-    if (typeof saveUserData === 'function') {
-        saveUserData();
-    }
 }
 
 // Yeni motivasyon mesajı
@@ -379,20 +369,12 @@ function toggleMenu() {
 
 // Üyelik oluştur
 function showRegister() {
-    if (typeof showRegister !== 'undefined' && showRegister.name === 'showRegister') {
-        // modals.js'deki fonksiyon çağrılacak
-        return;
-    }
     alert('Üyelik sistemi yakında aktif olacak!');
     toggleMenu();
 }
 
 // Üye girişi
 function showLogin() {
-    if (typeof showLoginModal !== 'undefined') {
-        showLoginModal();
-        return;
-    }
     alert('Giriş sistemi yakında aktif olacak!');
     toggleMenu();
 }

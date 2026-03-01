@@ -3,19 +3,15 @@
 // Kayıt Ol
 async function register(email, password, fullName) {
     try {
-        // Kullanıcı oluştur
         const userCredential = await auth.createUserWithEmailAndPassword(email, password);
         const user = userCredential.user;
 
-        // Profil güncelle
         await user.updateProfile({
             displayName: fullName
         });
 
-        // Email doğrulama gönder
         await user.sendEmailVerification();
 
-        // Firestore'da kullanıcı verisi oluştur
         await db.collection('users').doc(user.uid).set({
             fullName: fullName,
             email: email,
@@ -125,7 +121,6 @@ async function loadUserData() {
     const user = auth.currentUser;
     
     if (!user) {
-        // Kullanıcı giriş yapmamış - LocalStorage kullan
         loadData();
         return;
     }
@@ -136,7 +131,6 @@ async function loadUserData() {
         if (doc.exists) {
             const userData = doc.data();
             
-            // Kullanıcı verilerini yükle
             if (userData.startDate) {
                 localStorage.setItem('startDate', userData.startDate);
                 document.getElementById('startDate').value = userData.startDate;
@@ -162,7 +156,6 @@ async function saveUserData() {
     const user = auth.currentUser;
     
     if (!user) {
-        // Kullanıcı giriş yapmamış - LocalStorage kullan
         return;
     }
 
@@ -183,15 +176,19 @@ async function saveUserData() {
 // Kullanıcı menüsünü güncelle
 function updateUserMenu(user, userData) {
     const menu = document.getElementById('sideMenu');
-    const menuContent = menu.querySelector('h2').nextElementSibling;
     
-    // Mevcut linkleri temizle
-    while (menuContent && menuContent.tagName === 'A') {
-        menuContent.remove();
+    // Mevcut menü içeriğini temizle
+    const existingUserInfo = menu.querySelector('.user-info');
+    if (existingUserInfo) {
+        existingUserInfo.remove();
     }
     
-    // Yeni linkler ekle
+    const existingLinks = menu.querySelectorAll('a');
+    existingLinks.forEach(link => link.remove());
+    
+    // Kullanıcı bilgisi ekle
     const userInfo = document.createElement('div');
+    userInfo.className = 'user-info';
     userInfo.style.cssText = 'padding: 15px 30px; color: white; border-bottom: 2px solid rgba(255,255,255,0.2); margin-bottom: 20px;';
     userInfo.innerHTML = `
         <p style="margin: 5px 0; font-size: 0.9em; opacity: 0.8;">Hoş geldin,</p>
@@ -201,6 +198,7 @@ function updateUserMenu(user, userData) {
     
     menu.querySelector('h2').after(userInfo);
     
+    // Menü linklerini ekle
     const profileLink = document.createElement('a');
     profileLink.href = '#';
     profileLink.textContent = '👤 Profilim';
@@ -223,10 +221,8 @@ function updateUserMenu(user, userData) {
 // Auth state değişikliklerini dinle
 auth.onAuthStateChanged((user) => {
     if (user) {
-        // Kullanıcı giriş yapmış
         loadUserData();
     } else {
-        // Kullanıcı giriş yapmamış
         loadData();
     }
 });

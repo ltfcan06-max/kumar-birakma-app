@@ -311,7 +311,7 @@ function closeSubscriptionModal() {
     if (modal) modal.remove();
 }
 
-// Ödeme başlat (iyzico entegrasyonu için hazır)
+// Ödeme başlat
 function startPayment(plan) {
     const user = auth.currentUser;
     
@@ -322,9 +322,5 @@ function startPayment(plan) {
         return;
     }
     
-    // Şimdilik alert, sonra iyzico entegrasyonu eklenecek
-    alert('Ödeme sistemi yakında aktif olacak! iyzico entegrasyonu eklenecek.');
-    
-    // TODO: iyzico ödeme sayfasına yönlendir
-    // Bu kısım backend gerektirir (Firebase Functions veya Node.js server)
+    alert('Ödeme sistemi yakında aktif olacak! Firebase Functions ve iyzico entegrasyonu tamamlandıktan sonra çalışacak.');
 }
