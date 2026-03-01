@@ -113,15 +113,68 @@ const milestones = [
     { days: 365, name: "1 Yıl", emoji: "🌟" }
 ];
 
-// Acil durum mesajları
-const emergencyMessages = [
-    "5 dakika bekle. Bu his geçecek!",
-    "Sevdiğin birini ara ve konuş.",
-    "Dışarı çık, yürüyüşe git.",
-    "Şimdiye kadar ne kadar yol kat ettiğini düşün!",
-    "Kumar oynarsan kaybettiğin parayı düşün.",
-    "Derin nefes al: 4 saniye içeri, 4 saniye tut, 4 saniye dışarı.",
-    "Bir bardak su iç ve 10'a kadar say."
+// Acil durum mesajları - 6 farklı kombinasyon
+const emergencyCombinations = [
+    {
+        title: "Nefes Egzersizi",
+        messages: [
+            "Gözlerini kapat ve derin bir nefes al",
+            "4 saniye içeri çek, 4 saniye tut, 4 saniye dışarı ver",
+            "Bu nefes egzersizini 5 kez tekrarla",
+            "Vücudundaki gerginliği hisset ve bırak",
+            "Şu anda güvendesin, her şey yolunda"
+        ]
+    },
+    {
+        title: "Farkındalık Meditasyonu",
+        messages: [
+            "Şu anda neredesin? Etrafına bak",
+            "5 şey gör, 4 şey duy, 3 şey hisset",
+            "Bu his geçici, sen kalıcısın",
+            "Kumar oynamak istemek normal, ama oynamak zorunda değilsin",
+            "Bu anı geçir, güçlü ol"
+        ]
+    },
+    {
+        title: "Beden Taraması",
+        messages: [
+            "Ayaklarından başla, kaslarını gevşet",
+            "Bacaklarını, karnını, göğsünü rahatla",
+            "Omuzlarını indir, çeneni gevşet",
+            "Tüm vücudun rahat ve huzurlu",
+            "Kumar isteği sadece bir düşünce, geçecek"
+        ]
+    },
+    {
+        title: "Olumlu Düşünce",
+        messages: [
+            "Ben güçlüyüm, kumar benden güçlü değil",
+            "Her geçen gün daha da güçleniyorum",
+            "Ailem ve sevdiklerim için bunu yapıyorum",
+            "Özgürlük, kumar masasında değil kalbimde",
+            "Bugün kumar oynamayacağım ve gurur duyacağım"
+        ]
+    },
+    {
+        title: "Dikkat Dağıtma",
+        messages: [
+            "Hemen şimdi bir bardak su iç",
+            "Sevdiğin birini ara ve sohbet et",
+            "Dışarı çık, 10 dakika yürü",
+            "Müzik aç ve dans et",
+            "Bir şey yap, harekete geç!"
+        ]
+    },
+    {
+        title: "Gerçeklik Kontrolü",
+        messages: [
+            "Kumar oynarsan ne kaybedersin? Düşün",
+            "Şimdiye kadar ne kadar yol kat ettin?",
+            "Bugün kumar oynamazsan yarın nasıl hissedersin?",
+            "Ailene ne söyleyeceksin?",
+            "5 dakika bekle, bu his geçecek"
+        ]
+    }
 ];
 
 // Sayfa yüklendiğinde
@@ -259,10 +312,14 @@ function showEmergency() {
     const modal = document.getElementById('emergencyModal');
     const content = document.getElementById('emergencyContent');
     
-    let html = '<p style="font-size: 1.3em; color: #dc3545; font-weight: bold;">Şu anda kumar oynamak istiyorsun ama YAPMA!</p>';
+    // Rastgele bir kombinasyon seç
+    const randomIndex = Math.floor(Math.random() * emergencyCombinations.length);
+    const combination = emergencyCombinations[randomIndex];
+    
+    let html = '<p style="font-size: 1.3em; color: #dc3545; font-weight: bold;">🛑 DUR! ' + combination.title + '</p>';
     html += '<ul>';
     
-    emergencyMessages.forEach(msg => {
+    combination.messages.forEach(msg => {
         html += `<li>💡 ${msg}</li>`;
     });
     
