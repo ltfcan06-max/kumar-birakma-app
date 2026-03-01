@@ -357,3 +357,22 @@ function resetDate() {
         alert('Başlangıç tarihi sıfırlandı. Yeni bir başlangıç yapabilirsiniz!');
     }
 }
+
+
+// Menü toggle
+function toggleMenu() {
+    const menu = document.getElementById('sideMenu');
+    menu.classList.toggle('open');
+}
+
+// Üyelik oluştur
+function showRegister() {
+    alert('Üyelik sistemi yakında aktif olacak!');
+    toggleMenu();
+}
+
+// Üye girişi
+function showLogin() {
+    alert('Giriş sistemi yakında aktif olacak!');
+    toggleMenu();
+}
