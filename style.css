@@ -496,7 +496,7 @@ header p {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: #ff4757;
+    background: #8B0000;
     color: white;
     border: none;
     border-radius: 50px;
@@ -504,16 +504,16 @@ header p {
     font-size: 1.3em;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.5);
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.5);
     z-index: 998;
     transition: all 0.3s ease;
     white-space: nowrap;
 }
 
 .fixed-emergency-btn:hover {
-    background: #ee5a6f;
+    background: #A52A2A;
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.7);
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.7);
 }
 
 .fixed-emergency-btn:active {
