@@ -304,7 +304,8 @@ header p {
 }
 
 .motivation-card {
-    background: white;
+    background: #001f3f;
+    color: white;
 }
 
 .motivation-text {
@@ -314,11 +315,11 @@ header p {
     margin: 20px 0;
     font-style: italic;
     text-align: center;
-    background: #001f3f;
-    padding: 20px;
-    border-radius: 10px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
     min-height: 80px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: none;
 }
 
 .milestones-card {
